@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <script>
+        function func1(){
+            document.write("Dont scroll!!")
+        }
+        function func(){
+            var a = 1;
+            while(a<100){
+                document.writeln("Hello World<br>");
+                a+=1;
+            }
+        }
+        func()
+        window.onscroll= func1;
+    </script>
+</body>
+</html>

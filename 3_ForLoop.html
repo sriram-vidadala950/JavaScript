@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            border: none;
+            background: linear-gradient(to top, hotpink, pink, hotpink);
+            padding: 1em;
+            border-radius: 1em;
+            cursor: pointer;
+            color: black;
+        }
+        button:hover{
+            transform: translateY(-3px);
+            transition: transform 2s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function for_loop(){
+            for(var i = 0;i<=100;i++){
+                document.writeln("Welcome to For loop tutorial<br>");
+            }
+        }
+    </script>
+    <button onclick="for_loop()">Click Here</button>
+</body>
+</html>

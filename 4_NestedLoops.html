@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 10;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            border: none;
+            background: linear-gradient(to right, cyan, lightcyan,cyan);
+            padding: 1em;
+            border-radius: 1em;
+            cursor: pointer;
+        }
+        button:hover{
+            transform: translateY(-3px);
+            transition: transform 2s;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function NestedLoop(){
+            document.writeln("<ul>")
+            for(var i = 1;i<=10;i++){
+                for(var j = 1;j<=10;j++){
+                    document.writeln("<li>"+i+" X "+j+" = "+i*j+"<br>");
+                }
+                document.writeln("<br><br>");
+            }
+            document.writeln("</ul>")
+        }
+    </script>
+    <button onclick="NestedLoop()">Click Here</button>
+</body>
+</html>
