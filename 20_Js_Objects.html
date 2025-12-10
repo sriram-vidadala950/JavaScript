@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Objects declaration using key value pair
+        var a = {
+            name:"Ben",
+            lname:"Joe",
+            age:30,
+            email:"someone@gmail.com", 
+            salary: function(){
+                return 250000
+            },
+            legalStatus: function(){
+                if(this.age>=18){
+                    return "Major"
+                }else{
+                    return "Minor"
+                }
+            }
+        }
+        // document.writeln(a.legalStatus()+"<br>")
+        console.log(a);
+        
+        //Creating object using " new Object()"
+        var first = new Object();
+        first.fname = "Vidadala"
+        first.lname = "Sriram";
+        first.age = 20;
+        first.legalStatus=function(){
+            if(this.age>=18){
+                return "Major"
+            }else{
+                return "Minor"
+            }
+        }
+        // document.writeln(first.fname)
+        // console.log(first.legalStatus())
+    </script>
+</body>
+</html>

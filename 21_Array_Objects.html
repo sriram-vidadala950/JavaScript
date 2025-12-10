@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array=[
+            {
+                name:"Ben10",
+                age: 18,
+            },
+            {
+                name:"Gwen10",
+                age:19,
+            },
+            {
+                name:"Kewin",
+                age:20,
+            }
+        ]
+        array.forEach(loop)
+        function loop(element, index, array){
+            document.writeln(element.name+" "+element.age+"<br>")
+        }
+        for(var val of array){
+            document.writeln(val.name+" "+val.age+"<br>")
+        }
+    </script>
+</body>
+</html>

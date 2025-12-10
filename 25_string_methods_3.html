@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a = "   JavaScript is a dynamic,programming language and widely used language across the globe<br>"
+        // document.writeln(a)
+        // alert(a)
+        var b = a.trim()
+        // alert(b)
+        document.writeln("Character at index 8 : "+a.charAt(8)+"<br>")
+        document.writeln("Charater ASCII code at defined Index: "+b.charCodeAt(0)+"<br>")
+        document.writeln("Character derived using ASCII number: "+String.fromCharCode(74)+"<br>")
+        document.writeln("Repeat the sentences n times : "+a.repeat(3)+"<br>")
+        document.writeln("split the sentences : "+a.split("g")+"<br>")
+        document.writeln("slice the sentences from defined index : "+a.slice(10)+"<br>")
+        document.writeln("Substring from the sentences : "+a.substring(5,10)+"<br>")
+        var c = 10
+        var d = c.toString()
+        document.writeln("Integer to string : "+d+" "+typeof d+"<br>")
+    </script>
+</body>
+</html>
+<!-- charAt
+charCodeAt()
+trim
+string.fromCharCode()
+repeat()
+slice()
+substr()
+tostring() -->

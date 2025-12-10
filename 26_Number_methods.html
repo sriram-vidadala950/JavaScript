@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = "100"
+        var b = Number(a)
+        document.write("String Integer converted into number: "+a+" "+b,"<br>")
+        document.write("type checking : ",typeof b+" "+typeof a,"<br>")
+        var c = " 30.54 40.6"
+        document.writeln("Data stored in c and its data type : ",c+" "+typeof c,"<br>")
+        var d = parseInt(c)
+        document.writeln("String float converted into ParseInt : ",d+" "+typeof d,"<br>")
+        var e = parseFloat(c)
+        document.writeln("String float converted into parseFloat : ",e+" "+typeof e+"<br>")
+        document.writeln("Isfinite check 30.54 and string(abcd): "+isFinite(e)+" "+isFinite("abac")+"<br>")
+        document.writeln("Isfinite check string(20) and number(20): "+Number.isFinite("20")+" "+Number.isFinite(20)+"<br>")
+        document.writeln("Number is Integer int(20) and str(20)? : "+Number.isInteger(20)+" "+Number.isInteger("20"),"<br>")
+        var f = 20.1234567890123456789
+        document.writeln("Demo Number : "+f+"<br>")
+        document.writeln("toFixed : "+f.toFixed(1)+"<br>")
+        document.writeln("toPrecision : "+f.toPrecision(5)+"<br>")
+    </script>
+</body>
+</html>
