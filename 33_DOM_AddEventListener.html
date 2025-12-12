@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .outer-container{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background:transparent;
+            transition: background-color 250ms linear, color 250ms linear;
+    }
+        .inner-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;           /* important: lets anchors move to next row */
+            gap: 1rem;
+            border: 2px solid rgba(200,0,0,0.35);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            max-width: 100%;           /* prevent growing past viewport */
+    }
+        .bg-color{
+            text-decoration: none;
+            height: 2em;
+            width: 4.3em;
+            border: 2px solid brown;
+            padding: 1em;
+            border-radius: 1em;
+            text-align: center;
+            cursor: pointer;
+        }
+        #default-btn{
+             display: inline-block;
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <h1>Add color to your screen</h1>
+        <div class="inner-container">
+             <a class="bg-color" data-color="#78C7C7" data-name="Ocean Mist">Ocean Mist</a>
+            <a class="bg-color" data-color="#B57EDC" data-name="Lavender Bloom">Lavender Bloom</a>
+            <a class="bg-color" data-color="#FF6F61" data-name="Sunset Coral">Sunset Coral</a>
+            <a class="bg-color" data-color="#A8E6CF" data-name="Mint Frost">Mint Frost</a>
+            <a class="bg-color" data-color="#F4B942" data-name="Golden Dusk">Golden Dusk</a>
+            <a class="bg-color" data-color="#355C7D" data-name="Royal Sapphire">Royal Sapphire</a>
+            <a class="bg-color" data-color="#F7A9A8" data-name="Blush Rose">Blush Rose</a>
+            <a class="bg-color" data-color="#2A9D8F" data-name="Emerald Stone">Emerald Stone</a>
+            <a class="bg-color" data-color="#2D3142" data-name="Midnight Slate">Midnight Slate</a>
+            <a class="bg-color" data-color="#D4FF33" data-name="Neon Citrus">Neon Citrus</a>
+        </div>
+        <a class="bg-color" id="default-btn" onclick="default_color('white')">Default</a>
+    </div>
+    <script>
+        document.querySelectorAll('.bg-color').forEach(function(e1){
+            e1.addEventListener('click',function(){
+                const colorValue = this.dataset.color;
+                const colorName = this.dataset.name;
+
+                document.body.style.color = 'white'
+                document.body.style.backgroundColor = colorValue;
+                document.querySelector('h1').innerText = colorName;
+                show_default_btn()
+            });
+        })
+        document.querySelector('#default-btn').addEventListener('click',function(){
+            document.body.style.backgroundColor = 'white'
+             document.body.style.color = "black";
+             hide_default_btn() 
+        })
+        function show_default_btn(){
+            document.querySelector('#default-btn').style.display = 'inline-block'
+        }
+        function hide_default_btn(){
+            document.querySelector('h1').innerText = "Add color to your screen!!";
+            document.querySelector('#default-btn').style.display = 'none'
+        }
+        hide_default_btn()
+    </script>
+</body>
+</html>
+
+<!-- Add Event Listener -->
+ <!-- 
+    Syntax : element.addEventListener(eventType, callBackFunction)
+
+    Major event types : 
+        -> "click"
+        -> "mouseover"
+        -> "mouseout"
+        -> "keyup"
+        -> "keydown"
+        -> "scroll"
+        -> "submit"
+        -> "change"
+        -> "load"
+ -->

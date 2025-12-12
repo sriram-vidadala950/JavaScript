@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .outer-container{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background:transparent;
+            transition: background-color 250ms linear, color 250ms linear;
+    }
+        .inner-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;           /* important: lets anchors move to next row */
+            gap: 1rem;
+            border: 2px solid rgba(200,0,0,0.35);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            max-width: 100%;           /* prevent growing past viewport */
+    }
+        .bg-color{
+            text-decoration: none;
+            height: 2em;
+            width: 4.3em;
+            border: 2px solid brown;
+            padding: 1em;
+            border-radius: 1em;
+            text-align: center;
+            cursor: pointer;
+        }
+        #default-btn{
+             display: inline-block;
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <h1>Add color to your screen</h1>
+        <div class="inner-container">
+            <a class="bg-color" id="c1" onclick="changecolor('#78C7C7','Ocean Mist')">Ocean Mist</a>
+            <a class="bg-color" id="c2" onclick="changecolor('#B57EDC','Lavender Bloom')">Lavender Bloom</a>
+            <a class="bg-color" id="c3" onclick="changecolor('#FF6F61','Sunset Coral')">Sunset Coral</a>
+            <a class="bg-color" id="c4" onclick="changecolor('#A8E6CF','Mint Frost')">Mint Frost</a>
+            <a class="bg-color" id="c5" onclick="changecolor('#F4B942','Golden Dusk')">Golden Dusk</a>
+            <a class="bg-color" id="c6" onclick="changecolor('#355C7D','Royal Sapphire')">Royal Sapphire</a>
+            <a class="bg-color" id="c7" onclick="changecolor('#F7A9A8','Blush Rose')">Blush Rose</a>
+            <a class="bg-color" id="c8" onclick="changecolor('#2A9D8F','Emerald Stone')">Emerald Stone</a>
+            <a class="bg-color" id="c9" onclick="changecolor('#2D3142','Midnight Slate')">Midnight Slate</a>
+            <a class="bg-color" id="c10" onclick="changecolor('#D4FF33','Neon Citrus')">Neon Citrus</a>
+        </div>
+        <a class="bg-color" id="default-btn" onclick="default_color('white')">Default</a>
+    </div>
+    <script>
+        function changecolor(colorValue,colorName){
+            document.body.style.backgroundColor = colorValue;
+            document.body.style.color = "white";
+            document.querySelector('h1').innerText = colorName;
+            show_default_btn();
+        }
+
+        function default_color(){
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            hidden_btn();
+        }
+        
+        function hidden_btn(){
+            document.querySelector('h1').innerText = "Add color to your screen!!";
+            document.querySelector("#default-btn").style.display = 'none';
+        }
+
+        function show_default_btn(){
+            document.querySelector("#default-btn").style.display = 'inline-block';
+        }
+        hidden_btn();
+    </script>
+</body>
+</html>

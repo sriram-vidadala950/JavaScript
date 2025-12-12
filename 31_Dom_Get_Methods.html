@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="main-title">JavaScript DOM Practice</h1>
+
+    <section class="card">
+        <h2>Shopping List</h2>
+
+        <ul id="shopping-list">
+            <li class="item">Milk</li>
+            <li class="item">Bread</li>
+            <li class="item">Eggs</li>
+        </ul>
+
+        <input type="text" id="item-input" placeholder="New item...">
+        <button id="add-btn">Add Item</button>
+        <button id="clear-btn">Clear List</button>
+    </section>
+
+    <section class="card">
+        <h2>Practice Area</h2>
+        <p class="description" id="practice-text">
+            Use DOM methods to change my text, color, classes, attributes, or create new elements!
+        </p>
+
+        <button id="change-text-btn">Change Text</button>
+        <button id="toggle-color-btn">Toggle Color</button>
+    </section>
+     <script>
+        var name = document.getElementById('change-text-btn').innerText
+        console.log(name)
+     </script>
+
+</body>
+</html>
+
+
+<!--  DOM Get Methods -->
+<!-- 
+    ->innerText
+    ->innerHTML
+    ->getAttribute
+    ->getAttributeNode
+    ->Attributes
+-->

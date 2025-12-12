@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple DOM Practice (HTML & CSS Only)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      border: 2px solid #ccc;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      background: #fff3c4;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>DOM Practice Playground (No JavaScript Included)</h1>
+
+  <div class="container">
+    <div class="box" id="section1">
+      <h2>Section 1</h2>
+      <p>This is a simple paragraph. You can practice selecting me using DOM methods once you add JavaScript.</p>
+    </div>
+
+    <div class="box" id="section2">
+      <h2>Section 2 - List Items</h2>
+      <ul>
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+    </div>
+
+    <div class="box" id="section3">
+      <h2>Section 3 - Attributes</h2>
+      <p id="info" data-type="example" class="note">This element contains a custom attribute you can access later with JavaScript.</p>
+    </div>
+
+    <div class="box" id="section4">
+      <h2>Section 4 - Class Practice</h2>
+      <p class="note">Try adding/removing the class <code>highlight</code> using DOM methods once you begin JS practice.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--  Target DOM Objects -->
+  <!-- 
+
+    .id -> document.getElementByid(id)
+    .Tag Name ->document.getElementByTagName(name)
+    .Class Name ->document.getElementByClassName(name)
+
+        ->document
+        ->document.all
+        ->document.head
+        ->document.title
+        ->document.body
+        ->document.images
+        ->document.links
+        ->document.anchors
+        ->document.forms
+        ->Document.doctype
+        ->Document.url
+        ->Document.base URL
+        ->Document.domain
+  -->
