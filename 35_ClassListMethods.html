@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header{
+            width: 100%;
+            padding: 2em;
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+            border: 1px solid red;
+            margin: 10px 0;
+        }
+        .NewHeader{
+            background: burlywood;
+        }
+        h1{
+            background:greenyellow;
+        }
+        p{
+            background:greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="header-h1" class="abc">Add events</h1>
+        <p id="header-p" class="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <script>
+        document.querySelector('.header').addEventListener('click',fun)
+        function fun(){
+            // document.getElementById("header-h1").classList.add('NewHeader','FirstClass')
+            // document.getElementById('header-p').classList.add('NewClass','SecondClass')
+            // document.getElementById('header-p').classList.remove('FristClass')
+            document.getElementById('header-h1').classList.toggle('NewHeader')
+        }
+    </script>
+</body>
+</html>

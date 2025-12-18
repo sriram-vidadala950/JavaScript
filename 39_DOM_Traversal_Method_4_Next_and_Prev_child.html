@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corrected Layout</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.outer-container {
+    width: 60%;
+    max-width: 800px;
+    border: 2px solid orangered;
+    background: orchid;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.outer-container p {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.inner-container {
+    border: 2px solid olivedrab;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.inner-container p {
+    margin-bottom: 0.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+.inner {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+</style>
+</head>
+
+<body>
+<div class="outer-container" id="outer">
+    <p>Outer Container</p>
+
+    <div class="inner-container">
+        <p>Inner Container</p>
+
+        <div class="inner">
+            <div class="box">One</div>
+            <div class="box">Two</div>
+            <div class="box">Three</div>
+            <div class="box">Four</div>
+            <div class="box">Five</div>
+        </div>
+    </div>
+</div>
+<script>
+   var prev = document.querySelector('.inner-container').previousElementSibling;
+   Object.assign(prev.style,{
+    background:'purple',
+    padding:'10px'
+   })
+   var next = document.querySelector('.box').nextElementSibling;
+   Object.assign(next.style,{
+    background:'black',
+    padding:'10px'
+   })
+   var next = document.querySelector('.outer-container').nextElementSibling;
+   Object.assign(next.style,{
+    background:'black',
+    padding:'10px'
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .parent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 25em;
+            width: 25em;
+            background: plum;
+            border-radius: 2em;
+            position: relative;
+        }
+        .child{
+            border-radius: 2em;
+            height: 10em;
+            width: 10em;
+            background: rebeccapurple;
+            padding: 5%;
+        }
+        .text{
+            position: absolute;
+            top: 8%;
+            left: 8%;
+            color: midnightblue;
+        }
+        .text::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 2%;
+            background-color: rebeccapurple;
+            top: 0;
+            left: -8px;
+            border-radius: 10px;
+        }
+        .c-text{
+            position: relative;
+            color: plum;
+        }
+        .c-text::after{
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: -8px;
+            height: 100%;
+            width: 2%;
+            background-color: midnightblue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="parent">
+            <h3 class="text">Parent Container</h3>
+            <div class="child">
+                <h3 class="c-text">child Container</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.parent').addEventListener('click',function(){
+            alert("You have clicked on parent block")
+            document.body.style.backgroundColor = 'rebeccapurple';
+        });
+        document.querySelector('.child').addEventListener('click',function(e){
+            alert("You have clicked on child block")
+            e.stopPropagation();
+            document.body.style.backgroundColor = 'plum';
+        })
+    </script>
+</body>
+</html>

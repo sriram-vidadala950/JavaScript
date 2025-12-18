@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --bg-dark: #0f0f23;
+            --bg-card: #1a1a2e;
+            --bg-card-hover: #252540;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
+        }
+         body{
+            background: linear-gradient(145deg, #1a1a2e, #0f0f23);
+         }
+        .container{
+            margin: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 1em;
+        }
+        .header h1{
+            font-size: 3em;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6,#4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            font-weight: bold;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .header p{
+            font-size: 1em;
+            margin: 0 0 0.5em 0;
+            font-family: sans-serif;
+            color: #94a3b8;
+        }
+        .card{
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 3em;
+            margin: 2em;
+            border-radius: 1em;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            background:#1a1a2e ;
+            width: 100%;
+            max-width: 450px;
+        }
+        .card:hover {
+            box-shadow: 10px 10px 200px rgba(72, 72, 224, 0.3);
+            transition: all 0.5s ease;
+        }
+        .card h1{
+            text-align: center;
+            margin: 0 0 1.5em 0 ;
+            font-family: sans-serif;
+            color: whitesmoke;
+            font-size: 1.5em;
+           
+        }
+        .form-card{
+            display: flex;
+            flex-direction: column;
+            margin: 0.8em 0;
+        }
+        .form-card label{
+            font-size: 1em;
+            margin: 0 0 0.5em 0;
+            font-family: sans-serif;
+            color: #94a3b8;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .form-card input{
+            box-sizing: border-box;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            width: 100%;
+            padding: 0.9em 1em;
+            border-radius: 0.9em;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+        .form-card input[type="text"],
+        .form-card input[type='password']{
+            background: transparent;
+            color: white;
+            font-family: sans-serif;
+            margin: 0.3em 0em;
+        }
+        .form-card input[type='text']:focus,
+        .form-card input[type='password']:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
+        }
+        .form-btn{
+            padding: 0.9rem 1.8rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 1em 0em;
+            background: linear-gradient(to left, #6366f1, #8b5cf6);
+            color: whitesmoke;
+        }
+        .form-btn:hover{
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+            transform: translateY(-3px);
+            transition: transform 0.5s ease-in-out;
+        }
+        span{
+            color: #94a3b8;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+        span a{
+            text-decoration: none;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Saraswathi Library</h1>
+            <p>Digital Library Management System</p>
+        </div>
+        <div class="card">
+            <h1>Welcome Back</h1>
+            <div class="form-card">
+                <label for="">User ID</label>
+                <input type="text" id="user-login" placeholder="USR001 or STF001">
+            </div>
+            <div class="form-card">
+                <label for="">Password</label>
+                <input type="password" id="user-password" placeholder="Enter Password">
+            </div>
+            <button class="form-btn">Login</button>
+            <span><p>Don't have an account? <a href="">Create Account</a> </p></span>
+        </div>
+    </div>
+</body>
+</html>

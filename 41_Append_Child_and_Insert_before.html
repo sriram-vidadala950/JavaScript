@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to Java Script Tutorial</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet odit inventore modi nostrum aut porro eligendi dicta, eius, deserunt velit, vero consequuntur beatae veritatis ea esse dolore quis quia aliquid tempora excepturi quasi nemo sed officiis tempore! Rem sequi exercitationem expedita illo sit sed modi placeat, consequuntur quaerat, fugit laboriosam quasi vel blanditiis dolorum. Accusantium quos reprehenderit sequi ex vitae esse, veniam saepe sapiente inventore nobis totam aut, itaque consequuntur voluptatem, doloremque praesentium delectus. Voluptatem numquam deleniti quisquam, ipsa eveniet expedita. Quas laborum architecto excepturi pariatur culpa facilis, ratione unde voluptatem aspernatur nisi quos veritatis eum delectus labore commodi. Magnam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id a aliquam incidunt reprehenderit tempora quis esse ipsum exercitationem, cumque rem ut blanditiis minima pariatur fugit iste laborum ipsam minus maxime corporis sapiente dolore voluptatem. Necessitatibus iure voluptas ea ratione laudantium, sapiente quo? Neque, delectus ipsam libero, cum fugit temporibus voluptate sunt minima ullam deserunt necessitatibus, modi officia aperiam dignissimos. Reprehenderit illum cumque ab sequi vitae! Maxime maiores tempora aperiam facere magni animi nobis sit. Harum nulla natus at placeat atque labore eos, aliquam dolor possimus quae veniam, libero excepturi assumenda id quidem, rem provident eligendi cupiditate voluptatum ab suscipit enim?</p>
+    
+    
+    
+        </div>
+        <script>
+            var element = document.createElement('h2')
+            element.textContent = "Introduction"
+            element.style.textAlign = "left";
+            element.style.alignSelf = "flex-start";
+            var target = document.querySelector('.container')
+            target.insertBefore(element,target.children[1])
+        </script>
+    </body>
+    </html>

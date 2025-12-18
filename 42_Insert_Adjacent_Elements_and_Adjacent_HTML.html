@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 10% 10%;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            border: 2px solid black;
+            padding: 2em;
+            margin: auto;
+            height: auto;
+            background: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae dolorum ducimus itaque natus possimus placeat rem ullam reprehenderit enim quasi unde similique, eum obcaecati eligendi minus doloribus id mollitia quam quos, asperiores in assumenda quas minima quo. Soluta odit, quae, molestias inventore praesentium itaque, officia repudiandae nemo sapiente ut aliquid dolores cum dignissimos? Eaque, maiores inventore tenetur quam quae vitae cum qui eum, ipsa aliquam soluta consectetur veniam eius praesentium labore ex ipsam laboriosam facere adipisci blanditiis at eveniet. Quas quis sit nam! Perspiciatis placeat rem consequuntur animi quaerat qui esse error? Labore nam consequuntur ab praesentium accusantium eveniet harum!</p>
+    </div>
+    <script>
+        // <!-- Adjacent Element  -->
+        var element = document.createElement("h2")
+        element.textContent = "Java Script"
+        element.style.alignSelf = "flex-start"
+        var target = document.querySelector('.container')
+        target.insertAdjacentElement('beforebegin',element) //insertAdjacentElement('beforebegin','afterbegin','beforeend','afterend')
+    
+        // <!-- Adjacent HTML -->
+        // element = '<h1>Java Script</h1>'
+        // var target = document.querySelector('.container')
+        // target.insertAdjacentHTML('beforebegin',element) //insertAdjacentHTML('beforebegin','afterbegin','beforeend','afterend')
+        
+        // <!-- Adjacent Text -->
+        // element = 'Java Script'
+        // var target = document.querySelector('.container')
+        // target.insertAdjacentText('afterbegin',element)  //insertAdjacentText('beforebegin','afterbegin','beforeend','afterend')
+    </script>
+</body>
+</html>
+
+
+
+
+
+
